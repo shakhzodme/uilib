@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Colors from "./Colors";
+import ColorsStory from "./Colors";
 
 const meta = {
-  title: "Foundations/Colors",
-  component: Colors,
+  title: "Foundations",
+  component: ColorsStory,
   parameters: {
     layout: "fullscreen",
   },
-} satisfies Meta<typeof Colors>;
+} satisfies Meta<typeof ColorsStory>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Colors: Story = {};
