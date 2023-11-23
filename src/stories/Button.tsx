@@ -40,8 +40,8 @@ export const Button = ({
         size == "medium"
           ? "py-2 px-4 rounded-lg"
           : size == "small"
-          ? "text-sm py-2 px-3 rounded"
-          : "text-lg py-3 px-6 rounded-xl",
+            ? "text-sm py-2 px-3 rounded"
+            : "text-lg py-3 px-6 rounded-xl",
         primary ? "bg-sky-300" : "bg-gray-300",
         "storybook-button",
         `storybook-button--${size}`,
