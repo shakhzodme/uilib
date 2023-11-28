@@ -472,4 +472,20 @@ export const secondaryColors = [
   yellow,
 ];
 
-export default [...primaryColors, ...secondaryColors];
+const defaultColors = [...primaryColors, ...secondaryColors];
+
+export default defaultColors;
+
+const primaryDefault = "500";
+export const twColors = defaultColors.flat(1).reduce((acc, val) => {
+  const prefix = val[0];
+  const suffix = val[1] != undefined ? "-" + val[1] : "";
+  const key = prefix + suffix;
+  Object.assign(acc, { [key]: val[2] });
+
+  if (primaryDefault == val[1]) {
+    Object.assign(acc, { [prefix]: val[2] });
+  }
+
+  return acc;
+}, {});
