@@ -13,8 +13,14 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        order: ['Introduction', 'Foundations', 'Components', 'Website Pages', 'Website Components', '*']
+      }
+    }
   },
 
+  // @ts-expect-error
   decorators: [withThemeByClassName({
       themes: {
           // nameOfTheme: 'classNameForTheme',
