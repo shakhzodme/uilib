@@ -10,4 +10,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Light: Story = {};
+export const Light: Story = {
+  args: {
+    code: "#101828",
+    label: "gray-900",
+  },
+};

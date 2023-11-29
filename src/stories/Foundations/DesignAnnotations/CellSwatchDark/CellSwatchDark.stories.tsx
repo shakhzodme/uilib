@@ -12,7 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Dark: Story = {
   args: {
-    className: "bg-gray-900",
+    code: "#101828",
     label: "gray-900",
   },
 };

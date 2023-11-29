@@ -16,7 +16,7 @@ const Swatch: React.FC<{
   color: PALETTES.Color;
 }> = ({ color }) => {
   return (
-    <div className="flex flex-col rounded-2xl overflow-hidden border border-black/10">
+    <div className="flex flex-col rounded-2xl overflow-hidden bg-bg-primary border border-border-primary">
       <div
         style={{ backgroundColor: color.code }}
         className="h-20 flex items-center justify-center"
@@ -29,9 +29,9 @@ const Swatch: React.FC<{
         </span>
       </div>
       <div className="flex flex-col py-2 px-3">
-        <span className="text-gray-900">{color.label ?? color.name}</span>
-        <span className="text-xs text-gray-600">{color.name}</span>
-        <span className="text-xs text-gray-600">{color.code}</span>
+        <span className="text-text-primary">{color.label ?? color.name}</span>
+        <span className="text-xs text-text-tertiary">{color.name}</span>
+        <span className="text-xs text-text-tertiary">{color.code}</span>
       </div>
     </div>
   );
@@ -64,11 +64,13 @@ export const Palette: Story = {
   render: () => {
     return (
       <div className="flex flex-col gap-2 p-8">
-        <div className="text-3xl font-bold">Primary colors</div>
+        <div className="text-3xl font-bold text-text-primary">
+          Primary colors
+        </div>
         {["base", "gray", "brand", "error", "warning", "success"].map(
           (palette) => (
             <>
-              <div className="font-medium text-xl mt-8 mb-2">
+              <div className="font-medium text-xl mt-8 mb-2 text-text-primary">
                 {kebabizeName(palette)}
               </div>
               {/* @ts-ignore */}
@@ -76,7 +78,9 @@ export const Palette: Story = {
             </>
           ),
         )}
-        <div className="text-3xl mt-24 font-bold">Secondary colors</div>
+        <div className="text-3xl mt-24 font-bold text-text-primary">
+          Secondary colors
+        </div>
         {[
           "grayBlue",
           "grayCool",
@@ -104,7 +108,7 @@ export const Palette: Story = {
           "yellow",
         ].map((palette) => (
           <>
-            <div className="font-medium text-xl mt-8 mb-2">
+            <div className="font-medium text-xl mt-8 mb-2 text-text-primary">
               {kebabizeName(palette)}
             </div>
             {/* @ts-ignore */}

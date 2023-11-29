@@ -1,4 +1,4 @@
-import { NamedColor, namedColors } from "@/colors/named-colors";
+import { NamedColor, rawNamedColors } from "@/colors/named-colors";
 import type { Meta, StoryObj } from "@storybook/react";
 import CellSwatchDark from "../DesignAnnotations/CellSwatchDark/CellSwatchDark";
 import CellSwatchLight from "../DesignAnnotations/CellSwatchLight/CellSwatchLight";
@@ -20,8 +20,8 @@ type HeadingProps = {
 };
 
 const Divider: React.FC = () => (
-  <tr className="border-y border-gray-200">
-    <td className="bg-gray-50 h-3" colSpan={4} />
+  <tr className="border-y border-border-secondary">
+    <td className="bg-bg-secondary h-3" colSpan={4} />
   </tr>
 );
 
@@ -31,13 +31,13 @@ const Heading: React.FC<{ props: HeadingProps }> = ({
   <>
     <tr>
       <td colSpan={4}>
-        <h1 className="text-gray-900 text-display-xs font-semibold mb-3 mt-16">
+        <h1 className="text-text-primary text-display-xs font-semibold mb-3 mt-16">
           {heading}
         </h1>
-        <p className="text-gray-600 text-lg mb-16">{description}</p>
+        <p className="text-text-tertiary text-lg mb-16">{description}</p>
       </td>
     </tr>
-    <tr className="text-gray-600 text-xs">
+    <tr className="text-text-tertiary text-xs">
       <td className="py-4 pr-5">Name</td>
       <td className="py-4 px-5">Light mode</td>
       <td className="py-4 px-5">Dark mode</td>
@@ -55,16 +55,22 @@ const ColorRow: React.FC<{ name: string; color: NamedColor }> = ({
   const modifier = name.split("_").slice(1).join("_");
 
   return (
-    <tr className="border-y border-gray-200">
+    <tr className="border-y border-border-secondary">
       <td>
         <div
           className={cn(
-            "p-5 text-gray-900 text-md font-semibold py-1 px-3 rounded-md border border-gray-200 inline-block",
-            { "bg-gray-50 ml-8": !!modifier },
+            "text-text-primary bg-bg-primary",
+            "border border-border-secondary",
+            "inline-block rounded-md",
+            "text-md font-semibold",
+            "p-5 py-1 px-3",
+            { "bg-bg-primary_hover ml-8": !!modifier },
           )}
         >
           <span>{main}</span>
-          {modifier && <span className="text-gray-500">_{modifier}</span>}
+          {modifier && (
+            <span className="text-text-quarterary">_{modifier}</span>
+          )}
         </div>
       </td>
       <td className="p-5">
@@ -73,7 +79,7 @@ const ColorRow: React.FC<{ name: string; color: NamedColor }> = ({
       <td className="p-5">
         <CellSwatchDark code={color.dark.code} label={color.dark.name} />
       </td>
-      <td className="p-5 text-gray-600 text-md">{color.description}</td>
+      <td className="p-5 text-text-tertiary text-md">{color.description}</td>
     </tr>
   );
 };
@@ -117,9 +123,16 @@ const NamedColors: React.FC<{ start: string; end: string }> = ({
     "fg-brand-secondary",
     "bg-quarterary",
     "bg-overlay",
+    "button-primary-border_hover",
+    "button-secondary-border_hover",
+    "button-secondary-color-border_hover",
+    "button-teritary-bg_hover",
+    "button-teritary-color-bg_hover",
+    "button-primary-error-border_hover",
+    "button-secondary-error-border_hover",
   ];
 
-  const allKeys = Object.keys(namedColors);
+  const allKeys = Object.keys(rawNamedColors);
   const startIndex = allKeys.findIndex((key) => key == start);
   const endIndex = allKeys.findIndex((key) => key == end);
   const keys = allKeys.slice(
@@ -131,7 +144,7 @@ const NamedColors: React.FC<{ start: string; end: string }> = ({
     <div className="flex flex-col gap-2 p-8">
       <table>
         {keys.map((key) => {
-          const color = namedColors[key];
+          const color = rawNamedColors[key];
           return (
             <>
               {key in headings && <Heading props={headings[key]} />}
@@ -159,4 +172,13 @@ export const ForegroundColors: Story = {
 
 export const BackgroundColors: Story = {
   render: () => <NamedColors start="bg-primary" end="bg-success-solid" />,
+};
+
+export const ButtonColors: Story = {
+  render: () => (
+    <NamedColors
+      start="button-primary-fg"
+      end="button-tertiary-error-bg_hover"
+    />
+  ),
 };

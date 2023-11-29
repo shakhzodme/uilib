@@ -43,7 +43,7 @@ export const All: Story = {
     ];
 
     return (
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 text-primary">
         {storyButtonVariants.variant.map((variant) => (
           <>
             <div key={variant + "header"}>

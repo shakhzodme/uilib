@@ -1,5 +1,6 @@
+import { createThemes } from "tw-colors";
 import { defaultColors } from ".";
-// import { namedColors as rawNamedColors } from "./named-colors";
+import { NamedColor, rawNamedColors } from "./named-colors";
 import { Color } from "./palettes";
 
 export const colors = defaultColors
@@ -16,4 +17,17 @@ export const colors = defaultColors
   })
   .reduce((acc, val) => Object.assign(acc, val), {});
 
-// export const namedColors = Object.keys(rawNamedColors).reduce((acc, key) => Object.assign(acc, {}))
+const extractColorProperty = (
+  colors: Record<string, NamedColor>,
+  property: "light" | "dark",
+) => {
+  return Object.keys(colors).reduce((acc, key) => {
+    const color = colors[key];
+    return Object.assign(acc, { [key]: color[property].code });
+  }, {});
+};
+
+export const namedColors = createThemes({
+  light: extractColorProperty(rawNamedColors, "light"),
+  dark: extractColorProperty(rawNamedColors, "dark"),
+});
