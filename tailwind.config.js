@@ -1,11 +1,12 @@
-import { twColors } from "./src/colors";
+import { createThemes } from "tw-colors";
+import { colors } from "./src/colors/tailwind";
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: ["class", '[data-mode="dark"]'],
   theme: {
-    colors: twColors,
+    colors,
     extend: {
       fontSize: {
         xs: ["12px", "18px"],
@@ -30,5 +31,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [createThemes({})],
 };

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import * as COLORS from "@/colors";
+import * as PALETTES from "@/colors/palettes";
 
 const meta = {
   title: "Foundations/Colors",
@@ -13,21 +13,25 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Swatch: React.FC<{
-  color: COLORS.Color;
+  color: PALETTES.Color;
 }> = ({ color }) => {
   return (
     <div className="flex flex-col rounded-2xl overflow-hidden border border-black/10">
       <div
-        style={{ backgroundColor: color[2] }}
+        style={{ backgroundColor: color.code }}
         className="h-20 flex items-center justify-center"
       >
-        <span className="text-lg font-medium" style={{ color: color[4] }}>
-          {color[3]}
+        <span
+          className="text-lg font-medium"
+          style={{ color: color.foregroundTextColor ?? "#ffffff" }}
+        >
+          {color.contrastRatio}
         </span>
       </div>
       <div className="flex flex-col py-2 px-3">
-        <span className="text-gray-900">{color[1] ?? color[0]}</span>
-        <span className="text-xs text-gray-600">{color[2]}</span>
+        <span className="text-gray-900">{color.label ?? color.name}</span>
+        <span className="text-xs text-gray-600">{color.name}</span>
+        <span className="text-xs text-gray-600">{color.code}</span>
       </div>
     </div>
   );
@@ -46,11 +50,11 @@ const kebabizeName = (name: string) => {
   return newName;
 };
 
-const renderColors = (colors: COLORS.Color[]) => {
+const renderColors = (colors: Record<string, PALETTES.Color>) => {
   return (
     <div className="grid grid-cols-[repeat(12,_minmax(6rem,_12rem))] gap-2 overflow-scroll">
-      {colors.map((color, colorIndex) => (
-        <Swatch key={colorIndex} color={color} />
+      {Object.keys(colors).map((key, colorIndex) => (
+        <Swatch key={colorIndex} color={colors[key]} />
       ))}
     </div>
   );
@@ -68,7 +72,7 @@ export const Palette: Story = {
                 {kebabizeName(palette)}
               </div>
               {/* @ts-ignore */}
-              {renderColors(COLORS[palette])}
+              {renderColors(PALETTES[palette])}
             </>
           ),
         )}
@@ -104,7 +108,7 @@ export const Palette: Story = {
               {kebabizeName(palette)}
             </div>
             {/* @ts-ignore */}
-            {renderColors(COLORS[palette])}
+            {renderColors(PALETTES[palette])}
           </>
         ))}
       </div>
