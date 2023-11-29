@@ -49,11 +49,11 @@ export const buttonVariants = cva(
         ],
       },
       size: {
-        sm: "py-2 px-3 text-sm",
-        md: "py-2.5 px-3.5 text-sm",
-        lg: "py-3 px-4 text-md",
-        xl: "py-3.5 px-4.5 text-md",
-        "2xl": "py-4 px-5.5 text-lg",
+        sm: "py-2 px-3 text-sm gap-1.5",
+        md: "py-2.5 px-3.5 text-sm gap-1.5",
+        lg: "py-3 px-4 text-md gap-2",
+        xl: "py-3.5 px-4.5 text-md gap-2",
+        "2xl": "py-4 px-5.5 text-lg gap-2.5",
       },
     },
     defaultVariants: {
@@ -83,21 +83,32 @@ export const storyButtonVariants: StoryVariants = {
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    ButtonVariants {}
+    ButtonVariants {
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
+}
 
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = "primary",
   size = "md",
   className,
+  leftIcon,
+  rightIcon,
   ...restProps
 }) => {
   return (
     <button
-      className={cn(buttonVariants({ variant, size }), className)}
+      className={cn(
+        buttonVariants({ variant, size }),
+        "inline-flex items-center",
+        className,
+      )}
       {...restProps}
     >
-      {children}
+      {leftIcon}
+      <span>{children}</span>
+      {rightIcon}
     </button>
   );
 };

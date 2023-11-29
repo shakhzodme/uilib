@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import ButtonComponent, { storyButtonVariants } from "./Button";
+import { RiCheckboxBlankCircleLine } from "react-icons/ri";
 
 const meta = {
   title: "Components/Button",
@@ -21,7 +21,16 @@ export const Constructor: Story = {
 
 export const All: Story = {
   render: () => {
-    const states = [{}, { disabled: true }];
+    const states = [
+      {},
+      { disabled: true },
+      { leftIcon: <RiCheckboxBlankCircleLine /> },
+      { rightIcon: <RiCheckboxBlankCircleLine /> },
+      {
+        leftIcon: <RiCheckboxBlankCircleLine />,
+        rightIcon: <RiCheckboxBlankCircleLine />,
+      },
+    ];
 
     return (
       <div className="flex flex-col gap-2">
