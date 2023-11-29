@@ -24,11 +24,21 @@ export const All: Story = {
     const states = [
       {},
       { disabled: true },
+
       { leftIcon: <RiCheckboxBlankCircleLine /> },
+      { leftIcon: <RiCheckboxBlankCircleLine />, disabled: true },
+
       { rightIcon: <RiCheckboxBlankCircleLine /> },
+      { rightIcon: <RiCheckboxBlankCircleLine />, disabled: true },
+
       {
         leftIcon: <RiCheckboxBlankCircleLine />,
         rightIcon: <RiCheckboxBlankCircleLine />,
+      },
+      {
+        leftIcon: <RiCheckboxBlankCircleLine />,
+        rightIcon: <RiCheckboxBlankCircleLine />,
+        disabled: true,
       },
     ];
 
