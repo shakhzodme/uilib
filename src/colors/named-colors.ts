@@ -135,6 +135,203 @@ export const namedColors: NestedNamedColor = {
     description: "Default success state semantic text color.",
   },
   // ---
+  // Border color
+  // ---
+  "border-primary": {
+    light: gray[300],
+    dark: gray[700],
+    description:
+      "High contrast borders. These are used for components such as input fields, button groups, and checkboxes.",
+  },
+  "border-secondary": {
+    light: gray[200],
+    dark: gray[800],
+    description:
+      "Medium contrast borders. This is the most commonly used border color and is the default for most components (such as file uploaders), cards (such as tables), and content dividers.",
+  },
+  "border-tertiary": {
+    light: gray[100],
+    dark: gray[800],
+    description:
+      "Low contrast borders useful for very subtle dividers and borders such as line and bar chart axis dividers.",
+  },
+  "border-disabled": {
+    light: gray[300],
+    dark: gray[700],
+    description:
+      "Default disabled border color for disabled states in components such as input fields and checkboxes.",
+  },
+  "border-disabled_subtle": {
+    light: gray[200],
+    dark: gray[800],
+    description:
+      "A more subtle (lower contrast) alternative for disabled borders such as disabled buttons.",
+  },
+  // ---
+  "border-brand": {
+    light: brand[300],
+    dark: brand[400],
+    description:
+      "Default brand border color. Useful for active states in components such as input fields.",
+  },
+  "border-brand-solid": {
+    light: brand[600],
+    dark: brand[600],
+    description:
+      "Default solid (dark) brand border color. Useful for active states in components such as selected checkboxes and checkbox groups.",
+  },
+  "border-brand-solid_alt": {
+    light: brand[600],
+    dark: gray[700],
+    description:
+      "SO FAR ONLY TWO SMALL USE CASE FOUND... An alternative for solid (dark) brand border color that switches to gray when in dark mode. Useful for components such as metric items and content quotes.",
+  },
+  // ---
+  "border-error": {
+    light: error[300],
+    dark: error[400],
+    description:
+      "Default error state semantic border color. Useful for error states in components such as input fields.",
+  },
+  "border-error-solid": {
+    light: error[600],
+    dark: error[600],
+    description:
+      "Default solid (dark) error state semantic border color. Useful for error states in components such as file uploaders.",
+  },
+  // ---
+  // Foreground color
+  // ---
+  "fg-primary": {
+    light: gray[900],
+    dark: base.white,
+    description: "Highest contrast non-text foreground elements such as icons.",
+  },
+  "fg-secondary": {
+    light: gray[700],
+    dark: gray[300],
+    description: "High contrast non-text foreground elements such as icons.",
+  },
+  "fg-secondary_hover": {
+    light: gray[800],
+    dark: gray[200],
+    description: "Secondary foreground elements when in hover state.",
+  },
+  "fg-tertiary": {
+    light: gray[600],
+    dark: gray[400],
+    description: "Medium contrast non-text foreground elements such as icons.",
+  },
+  "fg-tertiary_hover": {
+    light: gray[700],
+    dark: gray[300],
+    description: "Tertiary foreground elements when in hover state.",
+  },
+  "fg-quarterary": {
+    light: gray[500],
+    dark: gray[400],
+    description:
+      "Medium-low contrast non-text foreground elements such as icons.",
+  },
+  "fg-quarterary_hover": {
+    light: gray[600],
+    dark: gray[300],
+    description: "Quarterary foreground elements when in hover state.",
+  },
+  "fg-quinary": {
+    light: gray[400],
+    dark: gray[500],
+    description:
+      "Low contrast non-text foreground elements such as help icons.",
+  },
+  "fg-quinary_hover": {
+    light: gray[500],
+    dark: gray[400],
+    description:
+      "Quinary foreground elements when in hover state, such as help icons.",
+  },
+  "fg-senary": {
+    light: gray[300],
+    dark: gray[600],
+    description:
+      "Lowest contrast non-text foreground elements such as breadcrumb divider icons and vector map. Used very sparingly.",
+  },
+  // ---
+  "fg-white": {
+    light: base.white,
+    dark: base.white,
+    description:
+      "Foreground elements that are always white, regardless of the mode.",
+  },
+  "fg-disabled": {
+    light: gray[400],
+    dark: gray[500],
+    description:
+      "Default color for disabled non-text foreground elements such as icons in disabled button group buttons and input dropdown menu items.",
+  },
+  "fg-disabled_subtle": {
+    light: gray[300],
+    dark: gray[600],
+    description:
+      "A more subtle (lower contrast) alternative for non-text disabled foreground elements such as disabled active checkboxes and tag checkboxes.",
+  },
+  // ---
+  "fg-brand-primary": {
+    light: brand[600],
+    dark: brand[500],
+    description:
+      "Primary brand color non-text foreground elements such as featured icons and progress bars.",
+  },
+  "fg-brand-primary_alt": {
+    light: brand[600],
+    dark: gray[300],
+    description:
+      "An alternative for primary brand color non-text foreground elements that switches to gray when in dark mode such as active horizontal tabs.",
+  },
+  "fg-brand-secondary": {
+    light: brand[500],
+    dark: brand[500],
+    description:
+      "Secondary brand color non-text foreground elements such as accents and arrows in marketing site sections (e.g. hero header sections).",
+  },
+  // ---
+  "fg-error-primary": {
+    light: error[600],
+    dark: error[500],
+    description:
+      "Primary error state color for non-text foreground elements such as featured icons.",
+  },
+  "fg-error-secondary": {
+    light: error[500],
+    dark: error[400],
+    description:
+      "Secondary error state color for non-text foreground elements such as icons in error state input fields and negative metrics item charts and icons.",
+  },
+  "fg-warning-primary": {
+    light: warning[600],
+    dark: warning[500],
+    description:
+      "Primary warning state color for non-text foreground elements such as featured icons.",
+  },
+  "fg-warning-secondary": {
+    light: warning[500],
+    dark: warning[400],
+    description:
+      "Secondary warning state color for non-text foreground elements.",
+  },
+  "fg-success-primary": {
+    light: success[500],
+    dark: success[600],
+    description:
+      "Primary success state color for non-text foreground elements such as featured icons.",
+  },
+  "fg-success-secondary": {
+    light: success[500],
+    dark: success[400],
+    description:
+      "Secondary success state color for non-text foreground elements such as button dots, avatar online indicator dots, and negative metrics item charts and icons.",
+  },
+  // ---
   // Background color
   // ---
   "bg-primary": {

@@ -5,7 +5,7 @@ import CellSwatchLight from "../DesignAnnotations/CellSwatchLight/CellSwatchLigh
 import cn from "@/utils/cn";
 
 const meta = {
-  title: "Foundations/Colors",
+  title: "Foundations/Colors/Named Colors",
   parameters: {
     layout: "fullscreen",
   },
@@ -78,44 +78,85 @@ const ColorRow: React.FC<{ name: string; color: NamedColor }> = ({
   );
 };
 
-export const NamedColors: Story = {
-  render: () => {
-    const headings: Record<string, HeadingProps> = {
-      "text-primary": {
-        heading: "Text color",
-        description:
-          "Use text color variables to manage all text fill colors in your designs across light and dark modes.",
-      },
-      "bg-primary": {
-        heading: "Background color",
-        description:
-          "Use background color variables to manage all fill colors for elements in your designs across light and dark modes.",
-      },
-    };
+const NamedColors: React.FC<{ start: string; end: string }> = ({
+  start,
+  end,
+}) => {
+  const headings: Record<string, HeadingProps> = {
+    "text-primary": {
+      heading: "Text color",
+      description:
+        "Use text color variables to manage all text fill colors in your designs across light and dark modes.",
+    },
+    "border-primary": {
+      heading: "Border color",
+      description:
+        "Use border color variables to manage all stroke colors in your designs across light and dark modes.",
+    },
+    "fg-primary": {
+      heading: "Foreground color",
+      description:
+        "Use foreground color variables to manage all non-text foreground elements in your designs across light and dark modes.",
+    },
+    "bg-primary": {
+      heading: "Background color",
+      description:
+        "Use background color variables to manage all fill colors for elements in your designs across light and dark modes.",
+    },
+  };
 
-    const breakAfter = [
-      "text-quarterary_on-brand",
-      "text-placeholder_subtle",
-      "text-tertiary_alt",
-      "bg-quarterary",
-      "bg-overlay",
-    ];
+  const breakAfter = [
+    "text-quarterary_on-brand",
+    "text-placeholder_subtle",
+    "text-tertiary_alt",
+    "border-tertiary",
+    "border-disabled_subtle",
+    "border-brand-solid_alt",
+    "fg-senary",
+    "fg-disabled_subtle",
+    "fg-brand-secondary",
+    "bg-quarterary",
+    "bg-overlay",
+  ];
 
-    return (
-      <div className="flex flex-col gap-2 p-8">
-        <table>
-          {Object.keys(namedColors).map((key) => {
-            const color = namedColors[key];
-            return (
-              <>
-                {key in headings && <Heading props={headings[key]} />}
-                <ColorRow name={key} color={color} />
-                {breakAfter.includes(key) && <Divider />}
-              </>
-            );
-          })}
-        </table>
-      </div>
-    );
-  },
+  const allKeys = Object.keys(namedColors);
+  const startIndex = allKeys.findIndex((key) => key == start);
+  const endIndex = allKeys.findIndex((key) => key == end);
+  const keys = allKeys.slice(
+    startIndex != -1 ? startIndex : 0,
+    endIndex != -1 ? endIndex + 1 : allKeys.length - 1,
+  );
+
+  return (
+    <div className="flex flex-col gap-2 p-8">
+      <table>
+        {keys.map((key) => {
+          const color = namedColors[key];
+          return (
+            <>
+              {key in headings && <Heading props={headings[key]} />}
+              <ColorRow name={key} color={color} />
+              {breakAfter.includes(key) && <Divider />}
+            </>
+          );
+        })}
+      </table>
+    </div>
+  );
+};
+
+export const TextColors: Story = {
+  render: () => <NamedColors start="text-primary" end="text-success-primary" />,
+};
+
+export const BorderColors: Story = {
+  render: () => <NamedColors start="border-primary" end="border-error-solid" />,
+};
+
+export const ForegroundColors: Story = {
+  render: () => <NamedColors start="fg-primary" end="fg-success-secondary" />,
+};
+
+export const BackgroundColors: Story = {
+  render: () => <NamedColors start="bg-primary" end="bg-success-solid" />,
 };
