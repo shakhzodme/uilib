@@ -27,7 +27,12 @@ const extractColorProperty = (
   }, {});
 };
 
-export const namedColors = createThemes({
-  light: extractColorProperty(rawNamedColors, "light"),
-  dark: extractColorProperty(rawNamedColors, "dark"),
-});
+export const namedColors = createThemes(
+  {
+    light: extractColorProperty(rawNamedColors, "light"),
+    dark: extractColorProperty(rawNamedColors, "dark"),
+  },
+  {
+    defaultTheme: "light",
+  },
+);
