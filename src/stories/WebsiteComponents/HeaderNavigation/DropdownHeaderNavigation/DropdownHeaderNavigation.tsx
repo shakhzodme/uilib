@@ -13,7 +13,7 @@ const DropdownHeaderNavigation: React.FC = () => {
       </nav>
       <div className="flex-1"></div>
       <div>
-        <Button variant="teritary-gray" size="lg">
+        <Button variant="tertiary-gray" size="lg">
           Log in
         </Button>
         <Button size="lg">Sign up</Button>

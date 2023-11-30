@@ -29,7 +29,7 @@ export const buttonNamedColors: Record<string, NamedColor> = {
   // ---
   "button-secondary-fg": {
     light: gray[700],
-    dark: gray[300],
+    dark: gray[400],
   },
   "button-secondary-fg_hover": {
     light: gray[800],
@@ -50,6 +50,10 @@ export const buttonNamedColors: Record<string, NamedColor> = {
   "button-secondary-border_hover": {
     light: gray[300],
     dark: gray[700],
+  },
+  "button-secondary-shadow": {
+    light: gray[100],
+    dark: gray[800],
   },
   // ---
   "button-secondary-color-fg": {
@@ -76,29 +80,33 @@ export const buttonNamedColors: Record<string, NamedColor> = {
     light: brand[300],
     dark: gray[700],
   },
+  "button-secondary-color-shadow": {
+    light: brand[200],
+    dark: gray[800],
+  },
   // ---
-  "button-teritary-fg": {
+  "button-tertiary-fg": {
     light: gray[600],
     dark: gray[400],
   },
-  "button-teritary-fg_hover": {
+  "button-tertiary-fg_hover": {
     light: gray[700],
     dark: gray[200],
   },
-  "button-teritary-bg_hover": {
+  "button-tertiary-bg_hover": {
     light: gray[50],
     dark: gray[800],
   },
   // ---
-  "button-teritary-color-fg": {
+  "button-tertiary-color-fg": {
     light: brand[700],
     dark: gray[300],
   },
-  "button-teritary-color-fg_hover": {
+  "button-tertiary-color-fg_hover": {
     light: brand[800],
     dark: gray[100],
   },
-  "button-teritary-color-bg_hover": {
+  "button-tertiary-color-bg_hover": {
     light: brand[50],
     dark: gray[800],
   },

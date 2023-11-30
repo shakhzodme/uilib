@@ -124,8 +124,8 @@ const NamedColors: React.FC<{ start: string; end: string }> = ({
     "button-primary-border_hover",
     "button-secondary-border_hover",
     "button-secondary-color-border_hover",
-    "button-teritary-bg_hover",
-    "button-teritary-color-bg_hover",
+    "button-tertiary-bg_hover",
+    "button-tertiary-color-bg_hover",
     "button-primary-error-border_hover",
     "button-secondary-error-border_hover",
   ];
