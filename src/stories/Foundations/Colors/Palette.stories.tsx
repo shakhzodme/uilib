@@ -64,9 +64,7 @@ export const Palette: Story = {
   render: () => {
     return (
       <div className="flex flex-col gap-2 p-8">
-        <div className="text-3xl font-bold text-primary">
-          Primary colors
-        </div>
+        <div className="text-3xl font-bold text-primary">Primary colors</div>
         {["base", "gray", "brand", "error", "warning", "success"].map(
           (palette) => (
             <>
