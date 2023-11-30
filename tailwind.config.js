@@ -1,4 +1,4 @@
-import { colors, namedColors } from "./src/colors/tailwind";
+import { colors, namedColors } from "./src/tailwind/colors";
 
 /** @type {import('tailwindcss').Config} */
 export default {

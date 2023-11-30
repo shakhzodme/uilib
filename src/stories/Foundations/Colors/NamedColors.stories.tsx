@@ -20,8 +20,8 @@ type HeadingProps = {
 };
 
 const Divider: React.FC = () => (
-  <tr className="border-y border-border-secondary">
-    <td className="bg-bg-secondary h-3" colSpan={4} />
+  <tr className="border-y border-secondary">
+    <td className="bg-secondary h-3" colSpan={4} />
   </tr>
 );
 
@@ -31,13 +31,13 @@ const Heading: React.FC<{ props: HeadingProps }> = ({
   <>
     <tr>
       <td colSpan={4}>
-        <h1 className="text-text-primary text-display-xs font-semibold mb-3 mt-16">
+        <h1 className="text-primary text-display-xs font-semibold mb-3 mt-16">
           {heading}
         </h1>
-        <p className="text-text-tertiary text-lg mb-16">{description}</p>
+        <p className="text-tertiary text-lg mb-16">{description}</p>
       </td>
     </tr>
-    <tr className="text-text-tertiary text-xs">
+    <tr className="text-tertiary text-xs">
       <td className="py-4 pr-5">Name</td>
       <td className="py-4 px-5">Light mode</td>
       <td className="py-4 px-5">Dark mode</td>
@@ -55,22 +55,20 @@ const ColorRow: React.FC<{ name: string; color: NamedColor }> = ({
   const modifier = name.split("_").slice(1).join("_");
 
   return (
-    <tr className="border-y border-border-secondary">
+    <tr className="border-y border-secondary">
       <td>
         <div
           className={cn(
-            "text-text-primary bg-bg-primary",
-            "border border-border-secondary",
+            "text-primary bg-primary",
+            "border border-secondary",
             "inline-block rounded-md",
             "text-md font-semibold",
             "p-5 py-1 px-3",
-            { "bg-bg-primary_hover ml-8": !!modifier },
+            { "bg-primary_hover ml-8": !!modifier },
           )}
         >
           <span>{main}</span>
-          {modifier && (
-            <span className="text-text-quarterary">_{modifier}</span>
-          )}
+          {modifier && <span className="text-quarterary">_{modifier}</span>}
         </div>
       </td>
       <td className="p-5">
@@ -79,7 +77,7 @@ const ColorRow: React.FC<{ name: string; color: NamedColor }> = ({
       <td className="p-5">
         <CellSwatchDark code={color.dark.code} label={color.dark.name} />
       </td>
-      <td className="p-5 text-text-tertiary text-md">{color.description}</td>
+      <td className="p-5 text-tertiary text-md">{color.description}</td>
     </tr>
   );
 };

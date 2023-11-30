@@ -4,6 +4,6 @@
 
 @layer base {
   html {
-    @apply bg-bg-primary text-text-primary;
+    @apply bg-primary text-primary;
   }
 }
