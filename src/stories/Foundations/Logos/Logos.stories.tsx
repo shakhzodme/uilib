@@ -37,7 +37,7 @@ const DrawLogoVariants: React.FC<{
 }> = ({ Component }) => {
   return (
     <div className="flex flex-col">
-      <div className="flex gap-16 p-4">
+      <div className="flex gap-16 p-4 bg-white">
         <Component logotype={true} white={false} />
         <Component logotype={false} white={false} />
       </div>
@@ -78,13 +78,10 @@ export const All: Story = {
       Interlock,
     ];
     return (
-      <div>
-        All Logos
-        <div className="grid grid-cols-2">
-          {Logos.map((Logo, index) => (
-            <DrawLogoVariants key={index} Component={Logo} />
-          ))}
-        </div>
+      <div className="grid grid-cols-2">
+        {Logos.map((Logo, index) => (
+          <DrawLogoVariants key={index} Component={Logo} />
+        ))}
       </div>
     );
   },

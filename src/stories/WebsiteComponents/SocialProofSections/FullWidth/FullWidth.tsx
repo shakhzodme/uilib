@@ -1,3 +1,4 @@
+import useDarkMode from "@/hooks/use-dark-mode";
 import {
   Boltshift,
   FeatherDev,
@@ -15,10 +16,11 @@ const FullWidth: React.FC<{
   brand?: boolean;
 }> = ({ brand = false }) => {
   const isMobile = useMediaQuery("(max-width: 640px)");
+  const isDarkMode = useDarkMode();
 
   const logoProps: LogoProps = {
     logotype: true,
-    white: brand,
+    white: isDarkMode || brand,
     size: isMobile ? "sm" : "md",
   };
 

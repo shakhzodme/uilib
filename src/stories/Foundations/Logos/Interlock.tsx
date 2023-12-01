@@ -12,8 +12,8 @@ const Interlock: React.FC<OuterLogoProps> = (outer) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="16" cy="18" r="14" stroke="#7839EE" stroke-width="4" />
-          <circle cx="24" cy="30" r="14" stroke="#7839EE" stroke-width="4" />
+          <circle cx="16" cy="18" r="14" stroke="#7839EE" strokeWidth="4" />
+          <circle cx="24" cy="30" r="14" stroke="#7839EE" strokeWidth="4" />
           <path
             d="M51.95 33.9092H56.48V12.9092H51.95V33.9092Z"
             fill="#101828"
@@ -61,8 +61,8 @@ const Interlock: React.FC<OuterLogoProps> = (outer) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g opacity="0.84">
-            <circle cx="16" cy="18" r="14" stroke="white" stroke-width="4" />
-            <circle cx="24" cy="30" r="14" stroke="white" stroke-width="4" />
+            <circle cx="16" cy="18" r="14" stroke="white" strokeWidth="4" />
+            <circle cx="24" cy="30" r="14" stroke="white" strokeWidth="4" />
             <path
               d="M51.95 33.9092H56.48V12.9092H51.95V33.9092Z"
               fill="white"
@@ -110,8 +110,8 @@ const Interlock: React.FC<OuterLogoProps> = (outer) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="16" cy="18" r="14" stroke="#7839EE" stroke-width="4" />
-          <circle cx="24" cy="30" r="14" stroke="#7839EE" stroke-width="4" />
+          <circle cx="16" cy="18" r="14" stroke="#7839EE" strokeWidth="4" />
+          <circle cx="24" cy="30" r="14" stroke="#7839EE" strokeWidth="4" />
         </svg>
       }
       shortWhite={
@@ -123,8 +123,8 @@ const Interlock: React.FC<OuterLogoProps> = (outer) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g opacity="0.84">
-            <circle cx="16" cy="18" r="14" stroke="white" stroke-width="4" />
-            <circle cx="24" cy="30" r="14" stroke="white" stroke-width="4" />
+            <circle cx="16" cy="18" r="14" stroke="white" strokeWidth="4" />
+            <circle cx="24" cy="30" r="14" stroke="white" strokeWidth="4" />
           </g>
         </svg>
       }

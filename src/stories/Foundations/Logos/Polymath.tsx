@@ -12,7 +12,7 @@ const Polymath: React.FC<OuterLogoProps> = (outer) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="20" cy="24" r="17" stroke="#155EEF" stroke-width="6" />
+          <circle cx="20" cy="24" r="17" stroke="#155EEF" strokeWidth="6" />
           <path
             d="M66.1839 20.4132C66.1839 21.4585 65.9319 22.4385 65.4279 23.3532C64.9426 24.2679 64.1679 25.0052 63.1039 25.5652C62.0586 26.1252 60.7332 26.4052 59.1279 26.4052H55.8519V33.9092H51.9319V14.3652H59.1279C60.6399 14.3652 61.9279 14.6265 62.9919 15.1492C64.0559 15.6719 64.8492 16.3905 65.3719 17.3052C65.9132 18.2199 66.1839 19.2559 66.1839 20.4132ZM58.9599 23.2412C60.0426 23.2412 60.8452 22.9985 61.3679 22.5132C61.8906 22.0092 62.1519 21.3092 62.1519 20.4132C62.1519 18.5092 61.0879 17.5572 58.9599 17.5572H55.8519V23.2412H58.9599Z"
             fill="#101828"
@@ -56,7 +56,7 @@ const Polymath: React.FC<OuterLogoProps> = (outer) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g opacity="0.84">
-            <circle cx="20" cy="24" r="17" stroke="white" stroke-width="6" />
+            <circle cx="20" cy="24" r="17" stroke="white" strokeWidth="6" />
             <path
               d="M66.1839 20.4132C66.1839 21.4585 65.9319 22.4385 65.4279 23.3532C64.9426 24.2679 64.1679 25.0052 63.1039 25.5652C62.0586 26.1252 60.7332 26.4052 59.1279 26.4052H55.8519V33.9092H51.9319V14.3652H59.1279C60.6399 14.3652 61.9279 14.6265 62.9919 15.1492C64.0559 15.6719 64.8492 16.3905 65.3719 17.3052C65.9132 18.2199 66.1839 19.2559 66.1839 20.4132ZM58.9599 23.2412C60.0426 23.2412 60.8452 22.9985 61.3679 22.5132C61.8906 22.0092 62.1519 21.3092 62.1519 20.4132C62.1519 18.5092 61.0879 17.5572 58.9599 17.5572H55.8519V23.2412H58.9599Z"
               fill="white"
@@ -100,7 +100,7 @@ const Polymath: React.FC<OuterLogoProps> = (outer) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="20" cy="24" r="17" stroke="#155EEF" stroke-width="6" />
+          <circle cx="20" cy="24" r="17" stroke="#155EEF" strokeWidth="6" />
         </svg>
       }
       shortWhite={
@@ -112,7 +112,7 @@ const Polymath: React.FC<OuterLogoProps> = (outer) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g opacity="0.84">
-            <circle cx="20" cy="24" r="17" stroke="white" stroke-width="6" />
+            <circle cx="20" cy="24" r="17" stroke="white" strokeWidth="6" />
           </g>
         </svg>
       }

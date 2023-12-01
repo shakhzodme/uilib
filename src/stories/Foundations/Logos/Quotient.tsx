@@ -13,8 +13,8 @@ const Quotient: React.FC<OuterLogoProps> = (outer) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M22 36.4667C28.8851 36.4667 34.4667 30.8851 34.4667 24C34.4667 17.1149 28.8851 11.5333 22 11.5333C15.1148 11.5333 9.53333 17.1149 9.53333 24C9.53333 30.8851 15.1148 36.4667 22 36.4667ZM22 46C34.1503 46 44 36.1503 44 24C44 11.8497 34.1503 2 22 2C9.84973 2 0 11.8497 0 24C0 36.1503 9.84973 46 22 46Z"
             fill="#6938EF"
           />
@@ -71,8 +71,8 @@ const Quotient: React.FC<OuterLogoProps> = (outer) => {
           <g opacity="0.84">
             <path
               opacity="0.8"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M22 36.4667C28.8851 36.4667 34.4667 30.8851 34.4667 24C34.4667 17.1149 28.8851 11.5333 22 11.5333C15.1148 11.5333 9.53333 17.1149 9.53333 24C9.53333 30.8851 15.1148 36.4667 22 36.4667ZM22 46C34.1503 46 44 36.1503 44 24C44 11.8497 34.1503 2 22 2C9.84973 2 0 11.8497 0 24C0 36.1503 9.84973 46 22 46Z"
               fill="white"
             />
@@ -129,8 +129,8 @@ const Quotient: React.FC<OuterLogoProps> = (outer) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M22 36.4667C28.8852 36.4667 34.4667 30.8851 34.4667 24C34.4667 17.1149 28.8852 11.5333 22 11.5333C15.1149 11.5333 9.53335 17.1149 9.53335 24C9.53335 30.8851 15.1149 36.4667 22 36.4667ZM22 46C34.1503 46 44.0001 36.1503 44.0001 24C44.0001 11.8497 34.1503 2 22 2C9.84975 2 0 11.8497 0 24C0 36.1503 9.84975 46 22 46Z"
             fill="#6938EF"
           />
@@ -155,8 +155,8 @@ const Quotient: React.FC<OuterLogoProps> = (outer) => {
           <g opacity="0.84">
             <path
               opacity="0.8"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M22 36.4667C28.8852 36.4667 34.4667 30.8851 34.4667 24C34.4667 17.1149 28.8852 11.5333 22 11.5333C15.1149 11.5333 9.53335 17.1149 9.53335 24C9.53335 30.8851 15.1149 36.4667 22 36.4667ZM22 46C34.1503 46 44.0001 36.1503 44.0001 24C44.0001 11.8497 34.1503 2 22 2C9.84975 2 0 11.8497 0 24C0 36.1503 9.84975 46 22 46Z"
               fill="white"
             />

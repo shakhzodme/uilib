@@ -1,12 +1,13 @@
 import React from "react";
 import { Component as HeroHeaderSection } from "@/stories/WebsiteComponents/HeaderSections/HeroHeaderSections/ScreenMockups/Fifth";
+import { Component as SocialProofSection } from "@/stories/WebsiteComponents/SocialProofSections/FullWidth";
 
 const First: React.FC = () => {
   return (
     <div>
       <HeroHeaderSection />
       <div>Section divider</div>
-      <div>Social proof section</div>
+      <SocialProofSection />
       <div>Features section</div>
       <div>Testimonial section</div>
       <div>FAQ section</div>

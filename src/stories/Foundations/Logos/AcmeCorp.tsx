@@ -13,8 +13,8 @@ const AcmeCorp: React.FC<OuterLogoProps> = (outer) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M0 24C13.9836 24 22 15.9836 22 2C22 15.9836 30.0164 24 44 24C30.0164 24 22 32.0164 22 46C22 32.0164 13.9836 24 0 24Z"
             fill="#101828"
           />
@@ -62,8 +62,8 @@ const AcmeCorp: React.FC<OuterLogoProps> = (outer) => {
         >
           <g opacity="0.84">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M0 24C13.9836 24 22 15.9836 22 2C22 15.9836 30.0164 24 44 24C30.0164 24 22 32.0164 22 46C22 32.0164 13.9836 24 0 24Z"
               fill="white"
             />
@@ -111,8 +111,8 @@ const AcmeCorp: React.FC<OuterLogoProps> = (outer) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M0 24C13.9836 24 22 15.9836 22 2C22 15.9836 30.0164 24 44 24C30.0164 24 22 32.0164 22 46C22 32.0164 13.9836 24 0 24Z"
             fill="#101828"
           />
@@ -128,8 +128,8 @@ const AcmeCorp: React.FC<OuterLogoProps> = (outer) => {
         >
           <g opacity="0.84">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M0 24C13.9836 24 22 15.9836 22 2C22 15.9836 30.0164 24 44 24C30.0164 24 22 32.0164 22 46C22 32.0164 13.9836 24 0 24Z"
               fill="white"
             />
