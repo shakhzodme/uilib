@@ -1,11 +1,10 @@
-import { colors, namedColors } from "./src/tailwind/colors";
+import { namedColors } from "./src/tailwind/colors";
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: ["class", '[data-theme="dark"]'],
   theme: {
-    colors,
     extend: {
       fontSize: {
         xs: ["12px", "18px"],
