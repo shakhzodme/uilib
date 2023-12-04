@@ -122,12 +122,15 @@ const NamedColors: React.FC<{ start: string; end: string }> = ({
     "bg-quarterary",
     "bg-overlay",
     "button-primary-border_hover",
-    "button-secondary-border_hover",
-    "button-secondary-color-border_hover",
+    "button-secondary-shadow",
+    "button-secondary-color-shadow",
     "button-tertiary-bg_hover",
     "button-tertiary-color-bg_hover",
     "button-primary-error-border_hover",
     "button-secondary-error-border_hover",
+    "icon-fg-brand_on-brand",
+    "featured-icon-light-fg-success",
+    "featured-icon-dark-fg-success",
   ];
 
   const allKeys = Object.keys(rawNamedColors);
@@ -178,5 +181,11 @@ export const ButtonColors: Story = {
       start="button-primary-fg"
       end="button-tertiary-error-bg_hover"
     />
+  ),
+};
+
+export const IconsColors: Story = {
+  render: () => (
+    <NamedColors start="icon-fg-brand" end="featured-icon-modern-border" />
   ),
 };

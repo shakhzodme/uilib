@@ -2,6 +2,7 @@ import { backgroundNamedColors } from "./background";
 import { borderNamedColors } from "./border";
 import { buttonNamedColors } from "./button";
 import { foregroundNamedColors } from "./foreground";
+import { iconsNamedColors } from "./icons";
 import { textNamedColors } from "./text";
 import { type NamedColor } from "./type";
 
@@ -13,4 +14,5 @@ export const rawNamedColors: Record<string, NamedColor> = {
   ...foregroundNamedColors,
   ...backgroundNamedColors,
   ...buttonNamedColors,
+  ...iconsNamedColors,
 };

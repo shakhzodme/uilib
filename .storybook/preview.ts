@@ -1,4 +1,4 @@
-import "./preview.css";
+import "../src/index.css";
 
 import type { Preview } from "@storybook/react";
 
@@ -15,7 +15,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Introduction', 'Foundations', 'Components', 'Website Pages', 'Website Components', '*']
+        order: ['Introduction', 'Foundations', 'Components', 'Shared Assets', 'Website Pages', 'Website Components', '*']
       }
     }
   },
