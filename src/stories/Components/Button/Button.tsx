@@ -10,19 +10,19 @@ export const buttonVariants = cva(
         primary: [
           "bg-button-primary-bg border-2 border-button-primary-border text-button-primary-fg",
           "hover:bg-button-primary-bg_hover hover:border-button-primary-border_hover",
-          "focus:shadow-button-focus focus:shadow-brand-600/50",
+          "shadow-xs focus:shadow-ring-brand-shadow-xs",
           "disabled:bg-disabled disabled:text-fg-disabled disabled:border-disabled_subtle",
         ],
         "secondary-gray": [
           "text-button-secondary-fg border-2 border-button-secondary-border",
           "hover:bg-button-secondary-bg_hover hover:text-button-secondary-fg_hover",
-          "focus:shadow-button-focus focus:shadow-button-secondary-shadow",
+          "shadow-xs focus:shadow-ring-gray-shadow-xs",
           "disabled:bg-primary disabled:text-fg-disabled disabled:border-disabled_subtle",
         ],
         "secondary-color": [
           "text-button-secondary-color-fg border-2 border-button-secondary-color-border",
           "hover:bg-button-secondary-color-bg_hover hover:text-button-secondary-color-fg_hover",
-          "focus:shadow-button-focus focus:shadow-button-secondary-color-shadow",
+          "shadow-xs focus:shadow-ring-brand-shadow-xs",
           "disabled:bg-primary disabled:text-fg-disabled disabled:border-disabled_subtle",
         ],
         "tertiary-gray": [

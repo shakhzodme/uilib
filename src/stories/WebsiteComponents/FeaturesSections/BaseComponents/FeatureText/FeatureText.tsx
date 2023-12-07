@@ -9,19 +9,27 @@ const FeatureText: React.FC<{
   textCentered?: boolean;
   icon?: React.ReactNode;
   iconPosition?: "topLeft" | "topCenter" | "left";
-}> = ({ textCentered = false, iconPosition = "topLeft", icon }) => {
+  iconFeatured?: boolean;
+}> = ({
+  textCentered = false,
+  iconPosition = "topLeft",
+  icon,
+  iconFeatured = false,
+}) => {
   return (
     <div
       className={cn({
         "text-center": textCentered,
-        "flex gap-4": iconPosition == "left",
+        "flex gap-4 items-start": iconPosition == "left",
       })}
     >
       {icon && (
         <div
-          className={cn("flex text-xl text-icon-fg-brand mb-3 xl:mb-4", {
+          className={cn("inline-flex text-xl text-icon-fg-brand mb-3 xl:mb-4", {
             "justify-center": iconPosition == "topCenter",
             "pt-1": iconPosition == "left",
+            "text-fg-secondary p-3 border rounded-lg border-featured-icon-modern-border":
+              iconFeatured,
           })}
         >
           {updateProps<IconBaseProps>(icon, { size: "24" })}

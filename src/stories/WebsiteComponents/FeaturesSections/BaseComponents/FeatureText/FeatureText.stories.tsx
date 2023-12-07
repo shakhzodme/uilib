@@ -44,3 +44,27 @@ export const IconLeft: Story = {
     iconPosition: "left",
   },
 };
+
+export const FeaturedIconTopLeft: Story = {
+  args: {
+    icon: <HiOutlineMail />,
+    iconFeatured: true,
+  },
+};
+
+export const FeaturedIconTopCentered: Story = {
+  args: {
+    textCentered: true,
+    icon: <HiOutlineMail />,
+    iconPosition: "topCenter",
+    iconFeatured: true,
+  },
+};
+
+export const FeaturedIconLeft: Story = {
+  args: {
+    icon: <HiOutlineMail />,
+    iconPosition: "left",
+    iconFeatured: true,
+  },
+};
