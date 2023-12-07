@@ -28,7 +28,7 @@ const FeatureText: React.FC<{
           className={cn("inline-flex text-xl text-icon-fg-brand mb-3 xl:mb-4", {
             "justify-center": iconPosition == "topCenter",
             "pt-1": iconPosition == "left",
-            "text-fg-secondary p-3 border rounded-lg border-featured-icon-modern-border":
+            "text-fg-secondary p-3 border rounded-lg border-featured-icon-modern-border shadow-xs":
               iconFeatured,
           })}
         >
