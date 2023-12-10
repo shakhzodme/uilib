@@ -19,46 +19,46 @@ const Third: React.FC = () => {
       </div>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-y-8 gap-x-16">
         <FeatureText
-          icon={<Communication.MessageChatCircle />}
+          icon={<Communication.MessageChatCircle stroke="currentColor" />}
           iconFeatured={true}
           heading="Share team inboxes"
           description="Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop."
-          buttonText="Learn more"
+          textCentered={true}
         />
         <FeatureText
-          icon={<General.Zap />}
+          icon={<General.Zap stroke="currentColor" />}
           iconFeatured={true}
           heading="Deliver instant answers"
           description="An all-in-one customer service platform that helps you balance everything your customers need to be happy."
-          buttonText="Learn more"
+          textCentered={true}
         />
         <FeatureText
-          icon={<Charts.ChartBreakoutSquare />}
+          icon={<Charts.ChartBreakoutSquare stroke="currentColor" />}
           iconFeatured={true}
           heading="Manage your team with reports"
           description="Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
-          buttonText="Learn more"
+          textCentered={true}
         />
         <FeatureText
-          icon={<Communication.MessageSmileCircle />}
+          icon={<Communication.MessageSmileCircle stroke="currentColor" />}
           iconFeatured={true}
           heading="Connect with customers"
           description="Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion."
-          buttonText="Learn more"
+          textCentered={true}
         />
         <FeatureText
-          icon={<Editor.Command />}
+          icon={<Editor.Command stroke="currentColor" />}
           iconFeatured={true}
           heading="Connect the tools you already use"
           description="Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools."
-          buttonText="Learn more"
+          textCentered={true}
         />
         <FeatureText
-          icon={<Communication.MessageHeartCircle />}
+          icon={<Communication.MessageHeartCircle stroke="currentColor" />}
           iconFeatured={true}
           heading="Our people make the difference"
           description="We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help."
-          buttonText="Learn more"
+          textCentered={true}
         />
       </div>
     </div>

@@ -4,6 +4,7 @@ export type OuterLogoProps = {
   logotype?: boolean;
   white?: boolean;
   size?: "sm" | "md";
+  className?: string;
 };
 
 export type InnerLogoProps = {
@@ -33,7 +34,10 @@ const Logo: React.FC<InnerLogoProps> = ({
 
   const Component = () =>
     // @ts-expect-error
-    React.cloneElement(ActiveComponent, { style: { height: sizeInPx } });
+    React.cloneElement(ActiveComponent, {
+      style: { height: sizeInPx },
+      className: outer.className,
+    });
 
   return <Component />;
 };
