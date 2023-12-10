@@ -4,6 +4,7 @@ import { Component as SocialProofSection } from "@/stories/WebsiteComponents/Soc
 import { Component as SectionDivider } from "@/stories/SharedAssets/MiscellaneousAssets/SectionDivider";
 import { Component as FeaturesSection } from "@/stories/WebsiteComponents/FeaturesSections/SimpleIcons/Second";
 import { Component as TestimonialSection } from "@/stories/WebsiteComponents/TestimonialSections/Simple";
+import { Component as FaqSection } from "@/stories/WebsiteComponents/FaqSections/Accordion";
 
 const First: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const First: React.FC = () => {
       <div className="bg-secondary">
         <TestimonialSection />
       </div>
-      <div>FAQ section</div>
+      <FaqSection />
       <SectionDivider />
       <div>Blog section</div>
       <SectionDivider />
