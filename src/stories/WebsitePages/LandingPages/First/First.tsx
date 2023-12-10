@@ -5,6 +5,7 @@ import { Component as SectionDivider } from "@/stories/SharedAssets/Miscellaneou
 import { Component as FeaturesSection } from "@/stories/WebsiteComponents/FeaturesSections/SimpleIcons/Second";
 import { Component as TestimonialSection } from "@/stories/WebsiteComponents/TestimonialSections/Simple";
 import { Component as FaqSection } from "@/stories/WebsiteComponents/FaqSections/Accordion";
+import { Component as BlogSection } from "@/stories/WebsiteComponents/BlogSections/BlogSections/Simple";
 
 const First: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const First: React.FC = () => {
       </div>
       <FaqSection />
       <SectionDivider />
-      <div>Blog section</div>
+      <BlogSection />
       <SectionDivider />
       <div>Footer</div>
     </div>

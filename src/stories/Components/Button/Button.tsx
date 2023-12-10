@@ -101,7 +101,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       className={cn(
         buttonVariants({ variant, size }),
-        "inline-flex items-center",
+        "inline-flex items-center justify-center text-center",
         className,
       )}
       {...restProps}
