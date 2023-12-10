@@ -5,7 +5,7 @@ import { Charts, Communication, Editor, General } from "untitledui-js";
 const Third: React.FC = () => {
   return (
     <div className="container mx-auto py-24">
-      <div className="xl:w-3/5 mb-16">
+      <div className="xl:w-3/5 mb-16 text-center mx-auto">
         <h3 className="text-brand-secondary text-md font-semibold mb-3">
           Features
         </h3>

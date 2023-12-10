@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ButtonComponent, { storyButtonVariants } from "./Button";
-import { RiCheckboxBlankCircleLine } from "react-icons/ri";
+import { General } from "untitledui-js";
 
 const meta = {
   title: "Components/Button",
@@ -26,19 +26,22 @@ const RenderVariant: React.FC<{
     {},
     { disabled: true },
 
-    { leftIcon: <RiCheckboxBlankCircleLine /> },
-    { leftIcon: <RiCheckboxBlankCircleLine />, disabled: true },
+    { leftIcon: <General.Placeholder stroke="currentColor" /> },
+    { leftIcon: <General.Placeholder stroke="currentColor" />, disabled: true },
 
-    { rightIcon: <RiCheckboxBlankCircleLine /> },
-    { rightIcon: <RiCheckboxBlankCircleLine />, disabled: true },
+    { rightIcon: <General.Placeholder stroke="currentColor" /> },
+    {
+      rightIcon: <General.Placeholder stroke="currentColor" />,
+      disabled: true,
+    },
 
     {
-      leftIcon: <RiCheckboxBlankCircleLine />,
-      rightIcon: <RiCheckboxBlankCircleLine />,
+      leftIcon: <General.Placeholder stroke="currentColor" />,
+      rightIcon: <General.Placeholder stroke="currentColor" />,
     },
     {
-      leftIcon: <RiCheckboxBlankCircleLine />,
-      rightIcon: <RiCheckboxBlankCircleLine />,
+      leftIcon: <General.Placeholder stroke="currentColor" />,
+      rightIcon: <General.Placeholder stroke="currentColor" />,
       disabled: true,
     },
   ];

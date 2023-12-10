@@ -1,7 +1,7 @@
 import React from "react";
+import { MediaDevices } from "untitledui-js";
 import { Component as DropdownHeaderNavigation } from "@/stories/WebsiteComponents/HeaderNavigation/DropdownHeaderNavigation";
 import { Button } from "@/stories/Components";
-import { FaCirclePlay } from "react-icons/fa6";
 
 const First: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const First: React.FC = () => {
           <Button
             variant="secondary-gray"
             size="2xl"
-            leftIcon={<FaCirclePlay />}
+            leftIcon={<MediaDevices.PlayCircle stroke="currentColor" />}
           >
             Demo
           </Button>

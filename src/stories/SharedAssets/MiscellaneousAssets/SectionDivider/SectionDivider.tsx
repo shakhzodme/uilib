@@ -3,7 +3,12 @@ import React from "react";
 
 const SectionDivider: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className={cn("h-0 border-b border-secondary container", className)} />
+    <div
+      className={cn(
+        "h-0 border-b border-secondary container mx-auto",
+        className,
+      )}
+    />
   );
 };
 
