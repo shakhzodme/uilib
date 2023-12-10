@@ -5,7 +5,7 @@ import React from "react";
 const Simple: React.FC = () => {
   const isDark = useDarkMode();
   return (
-    <div className="text-center py-24 container">
+    <div className="text-center py-24 container mx-auto">
       <Sisyphus
         logotype={true}
         white={isDark}
