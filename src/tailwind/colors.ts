@@ -65,7 +65,7 @@ const createThemes = <ThemeName extends string>(
       {},
     );
 
-  const colors = Object.keys(resolved.colors)
+  const finalColors = Object.keys(resolved.colors)
     .filter(
       (key) =>
         !["text-", "bg-", "border-"].some((ignore) => key.startsWith(ignore)),
@@ -74,6 +74,10 @@ const createThemes = <ThemeName extends string>(
       (acc: object, key) => Object.assign(acc, { [key]: resolved.colors[key] }),
       {},
     );
+
+  Object.keys(colors).forEach((key) =>
+    Object.assign(finalColors, { [key]: colors[key] }),
+  );
 
   return plugin(
     ({ addUtilities, addVariant }) => {
@@ -93,7 +97,7 @@ const createThemes = <ThemeName extends string>(
           textColor,
           backgroundColor,
           borderColor,
-          colors,
+          colors: finalColors,
         },
       },
     },
