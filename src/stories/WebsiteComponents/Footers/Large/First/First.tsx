@@ -7,12 +7,24 @@ const First: React.FC = () => {
       <div>
         <p>Product</p>
         <nav>
-          <Button variant="link-gray">Overview</Button>
-          <Button variant="link-gray">Features</Button>
-          <Button variant="link-gray">Solutions</Button>
-          <Button variant="link-gray">Tutorials</Button>
-          <Button variant="link-gray">Pricing</Button>
-          <Button variant="link-gray">Releases</Button>
+          <Button component="a" href="#" variant="link-gray">
+            Overview
+          </Button>
+          <Button component="a" href="#" variant="link-gray">
+            Features
+          </Button>
+          <Button component="a" href="#" variant="link-gray">
+            Solutions
+          </Button>
+          <Button component="a" href="#" variant="link-gray">
+            Tutorials
+          </Button>
+          <Button component="a" href="#" variant="link-gray">
+            Pricing
+          </Button>
+          <Button component="a" href="#" variant="link-gray">
+            Releases
+          </Button>
         </nav>
       </div>
       <div>lower side</div>

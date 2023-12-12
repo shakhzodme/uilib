@@ -1,3 +1,4 @@
+import { createPolymorphicComponent } from "@/factory/create-polymorphic-component";
 import cn from "@/utils/cn";
 import { VariantProps, cva } from "cva";
 import React from "react";
@@ -81,14 +82,16 @@ export const storyButtonVariants: StoryVariants = {
   size: ["sm", "md", "lg", "xl", "2xl"],
 };
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    ButtonVariants {
+export interface ButtonProps extends ButtonVariants {
+  className?: string;
+  children: React.ReactNode;
+  component?: "button" | "a" | "div";
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const _Button: React.FC<ButtonProps> = ({
+  component = "button",
   children,
   variant = "primary",
   size = "md",
@@ -97,8 +100,10 @@ const Button: React.FC<ButtonProps> = ({
   rightIcon,
   ...restProps
 }) => {
+  const Element = component;
+
   return (
-    <button
+    <Element
       className={cn(
         buttonVariants({ variant, size }),
         "inline-flex items-center justify-center text-center",
@@ -109,10 +114,12 @@ const Button: React.FC<ButtonProps> = ({
       {leftIcon}
       <span>{children}</span>
       {rightIcon}
-    </button>
+    </Element>
   );
 };
 
-Button.displayName = "Button";
+_Button.displayName = "Button";
+
+const Button = createPolymorphicComponent<"button", ButtonProps>(_Button);
 
 export default Button;
