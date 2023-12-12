@@ -1,5 +1,6 @@
 import { Button } from "@/stories/Components";
 import React from "react";
+import { General } from "untitledui-js";
 
 const First: React.FC = () => {
   return (

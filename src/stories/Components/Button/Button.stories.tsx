@@ -26,22 +26,22 @@ const RenderVariant: React.FC<{
     {},
     { disabled: true },
 
-    { leftIcon: <General.Placeholder stroke="currentColor" /> },
-    { leftIcon: <General.Placeholder stroke="currentColor" />, disabled: true },
+    { leftIcon: <General.Placeholder /> },
+    { leftIcon: <General.Placeholder />, disabled: true },
 
-    { rightIcon: <General.Placeholder stroke="currentColor" /> },
+    { rightIcon: <General.Placeholder /> },
     {
-      rightIcon: <General.Placeholder stroke="currentColor" />,
+      rightIcon: <General.Placeholder />,
       disabled: true,
     },
 
     {
-      leftIcon: <General.Placeholder stroke="currentColor" />,
-      rightIcon: <General.Placeholder stroke="currentColor" />,
+      leftIcon: <General.Placeholder />,
+      rightIcon: <General.Placeholder />,
     },
     {
-      leftIcon: <General.Placeholder stroke="currentColor" />,
-      rightIcon: <General.Placeholder stroke="currentColor" />,
+      leftIcon: <General.Placeholder />,
+      rightIcon: <General.Placeholder />,
       disabled: true,
     },
   ];

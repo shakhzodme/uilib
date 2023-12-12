@@ -1,5 +1,6 @@
 import { createPolymorphicComponent } from "@/factory/create-polymorphic-component";
 import cn from "@/utils/cn";
+import updateProps from "@/utils/update-props";
 import { VariantProps, cva } from "cva";
 import React from "react";
 
@@ -102,6 +103,15 @@ const _Button: React.FC<ButtonProps> = ({
 }) => {
   const Element = component;
 
+  const iconProps = {
+    stroke: "currentColor",
+    style: {
+      height: size == "2xl" ? "24px" : "20px",
+      width: size == "2xl" ? "24px" : "20px",
+    },
+    hello: "bello",
+  };
+
   return (
     <Element
       className={cn(
@@ -111,9 +121,9 @@ const _Button: React.FC<ButtonProps> = ({
       )}
       {...restProps}
     >
-      {leftIcon}
+      {leftIcon && updateProps(leftIcon, iconProps)}
       <span>{children}</span>
-      {rightIcon}
+      {rightIcon && updateProps(rightIcon, iconProps)}
     </Element>
   );
 };
