@@ -4,7 +4,7 @@ import { VariantProps, cva } from "cva";
 import React from "react";
 
 export const badgeVariants = cva(
-  "inline-flex items-center justify-center border",
+  "inline-flex items-center justify-center border transition-all",
   {
     variants: {
       variant: {
