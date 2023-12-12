@@ -85,6 +85,7 @@ const badgeGroupVariants = cva(
         className:
           "text-success-700 bg-white hover:bg-success-50 border-success-600",
       },
+      // ---
       {
         variant: "badge",
         size: "md",
@@ -112,14 +113,14 @@ type StoryVariants = {
   >[];
 };
 
-export const storyBadgeVariants: StoryVariants = {
+export const storyBadgeGroupVariants: StoryVariants = {
   variant: ["badge", "pill"],
   color: ["gray", "brand", "error", "warning", "success"],
   outline: [true, false],
   size: ["md", "lg"],
 };
 
-interface BadgeGroupProps extends BadgeGroupVariants {
+export interface BadgeGroupProps extends BadgeGroupVariants {
   innerBadge: BadgeProps;
   innerBadgePosition?: "left" | "right";
   children: React.ReactNode;
@@ -161,7 +162,7 @@ const BadgeGroup: React.FC<BadgeGroupProps> = ({
       )}
     >
       {innerBadgePosition == "left" && innerBadge}
-      <div className="inner-flex items-center justify-center gap-1">
+      <div className="inline-flex items-center justify-center gap-1">
         {leftIcon &&
           updateProps(leftIcon, { stroke: "currentColor", size: "12px" })}
         {children}
