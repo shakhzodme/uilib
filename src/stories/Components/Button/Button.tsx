@@ -83,7 +83,9 @@ export const storyButtonVariants: StoryVariants = {
   size: ["sm", "md", "lg", "xl", "2xl"],
 };
 
-export interface ButtonProps extends ButtonVariants {
+export interface ButtonProps<T extends HTMLElement = HTMLElement>
+  extends ButtonVariants,
+    React.HTMLAttributes<T> {
   className?: string;
   children: React.ReactNode;
   component?: "button" | "a" | "div";
