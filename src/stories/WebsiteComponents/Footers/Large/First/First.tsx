@@ -30,8 +30,8 @@ const First: React.FC<{
           </div>
         ))}
       </div>
-      <div className="h-px w-full border-t border-secondary" />
       <div className="flex flex-col gap-10">
+        <div className="h-px w-full border-t border-secondary" />
         <div className="flex justify-between items-center">
           <h1 className="text-xl font-bold">Logo</h1>
           <p className="text-md text-quarterary">
