@@ -109,7 +109,6 @@ const _Button: React.FC<ButtonProps> = ({
       height: size == "2xl" ? "24px" : "20px",
       width: size == "2xl" ? "24px" : "20px",
     },
-    hello: "bello",
   };
 
   return (

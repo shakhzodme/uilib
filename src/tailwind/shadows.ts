@@ -1,5 +1,5 @@
-import { rawFocusRings } from "@/colors/focus-rings";
-import { rawShadows } from "@/colors/shadows";
+import { rawFocusRings } from "../colors/focus-rings";
+import { rawShadows } from "../colors/shadows";
 import hexToRgba from "hex-to-rgba";
 
 const allShadows = { ...rawShadows, ...rawFocusRings };

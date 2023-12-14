@@ -3,7 +3,7 @@ import React from "react";
 export type OuterLogoProps = {
   logotype?: boolean;
   white?: boolean;
-  size?: "sm" | "md";
+  size?: "xs" | "sm" | "md";
   className?: string;
 };
 
@@ -30,7 +30,14 @@ const Logo: React.FC<InnerLogoProps> = ({
   }
 
   const size = outer.size ?? "md";
-  const sizeInPx = size == "md" ? "48px" : size == "sm" ? "36px" : undefined;
+  const sizeInPx =
+    size == "md"
+      ? "48px"
+      : size == "sm"
+        ? "36px"
+        : size == "xs"
+          ? "30px"
+          : undefined;
 
   const Component = () =>
     // @ts-expect-error

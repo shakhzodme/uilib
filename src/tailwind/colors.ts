@@ -85,30 +85,6 @@ const createThemes = <ThemeName extends string>(
     borderColor,
     colors: finalColors,
   };
-
-  // return plugin(
-  //   ({ addUtilities, addVariant }) => {
-  //     // add the css variables to "@layer utilities" because:
-  //     // - The Base layer does not provide intellisense
-  //     // - The Components layer might get overriden by tailwind default colors in case of name clash
-  //     addUtilities(resolved.utilities);
-  //     // add the theme as variant e.g. "theme-[name]:text-2xl"
-  //     resolved.variants.forEach(({ name, definition }) =>
-  //       addVariant(name, definition),
-  //     );
-  //   },
-  //   // extend the colors config
-  //   {
-  //     theme: {
-  //       extend: {
-  //         textColor,
-  //         backgroundColor,
-  //         borderColor,
-  //         colors: finalColors,
-  //       },
-  //     },
-  //   },
-  // );
 };
 
 export const namedColors = createThemes(
