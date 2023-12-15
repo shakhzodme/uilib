@@ -3,7 +3,7 @@ import cn from "@/utils/cn";
 import { cx } from "cva";
 import React from "react";
 
-export interface FeatureCardProps {
+export interface FeaturedCardProps {
   className?: string;
   image: React.ReactNode;
   title: string;
@@ -11,7 +11,7 @@ export interface FeatureCardProps {
   buttons?: ButtonProps[];
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({
+const FeaturedCard: React.FC<FeaturedCardProps> = ({
   className,
   image,
   title,
@@ -46,4 +46,4 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   );
 };
 
-export default FeatureCard;
+export default FeaturedCard;

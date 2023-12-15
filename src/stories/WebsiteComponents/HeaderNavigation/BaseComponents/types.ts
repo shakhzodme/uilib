@@ -1,10 +1,10 @@
 import React from "react";
-import { FeatureCardProps } from "./FeatureCard/FeatureCard";
+import { FeaturedCardProps } from "./FeaturedCard/FeaturedCard";
 import { type ButtonProps, type BadgeProps } from "@/stories/Components";
 
 export type NavigationItem = {
   label: string;
-  href: string;
+  href?: string;
   onClick?: React.AnchorHTMLAttributes<HTMLAnchorElement>["onClick"];
 };
 
@@ -20,7 +20,7 @@ export type NavigationMenuItem = {
 export interface FeaturedCardNavigationTrigger {
   name: "featured-card";
   items: NavigationMenuItem[];
-  featureCard: FeatureCardProps;
+  featureCard: FeaturedCardProps;
 }
 
 export type NavigationWithTrigger = NavigationItem & {

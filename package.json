@@ -13,11 +13,13 @@
     "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.4",
     "@uidotdev/usehooks": "^2.4.1",
     "clsx": "^2.0.0",
     "cva": "npm:class-variance-authority@^0.7.0",
     "framer-motion": "^10.16.15",
     "hex-to-rgba": "^2.0.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.0.0",

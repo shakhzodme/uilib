@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Component from "./FeatureCard";
+import Component from "./FeaturedCard";
 
 const meta = {
   title: "Website Components/Header Navigation/Base Components",
@@ -10,7 +10,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const FeatureCard: Story = {
+export const FeaturedCard: Story = {
   args: {
     image: (
       <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxvZ3xlbnwwfHwwfHx8MA%3D%3D" />
