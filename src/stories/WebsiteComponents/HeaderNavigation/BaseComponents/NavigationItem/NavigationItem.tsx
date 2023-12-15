@@ -61,7 +61,7 @@ const NavigationItem: React.FC<NavigationWithTrigger> = ({
       {trigger && show && (
         <div
           className={cn(
-            "absolute inline-flex rounded-xl border border-secondary shadow-lg transition-all overflow-hidden",
+            "inline-flex rounded-xl border border-secondary shadow-lg transition-all overflow-hidden bg-primary",
           )}
           ref={refs.setFloating}
           style={floatingStyles}

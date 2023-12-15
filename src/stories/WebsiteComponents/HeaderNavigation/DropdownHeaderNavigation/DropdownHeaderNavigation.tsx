@@ -4,6 +4,7 @@ import React from "react";
 import { Education } from "untitledui-js";
 import { NavigationWithTrigger } from "../BaseComponents/types";
 import NavigationItem from "../BaseComponents/NavigationItem/NavigationItem";
+import useDarkMode from "@/hooks/use-dark-mode";
 
 const navigation: NavigationWithTrigger[] = [
   { label: "Home", href: "#" },
@@ -45,10 +46,12 @@ const navigation: NavigationWithTrigger[] = [
 ];
 
 const DropdownHeaderNavigation: React.FC = () => {
+  const isDark = useDarkMode();
+
   return (
     <div className="flex items-center">
       <div>
-        <Layers logotype={true} size="xs" />
+        <Layers logotype={true} white={isDark} size="xs" />
       </div>
       <nav className="flex gap-8">
         {navigation.map((link) => (
