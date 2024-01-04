@@ -12,7 +12,10 @@ const First: React.FC<{
     <div className="container mx-auto flex flex-col gap-16 pt-16 pb-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-8">
         {navigation.map((value, index) => (
-          <div key={index} className="flex flex-col justify-center items-center gap-4 xl:items-start">
+          <div
+            key={index}
+            className="flex flex-col justify-center items-center gap-4 xl:items-start"
+          >
             <p className="text-quarterary text-sm font-semibold">
               {value.title}
             </p>
