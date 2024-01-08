@@ -4,7 +4,7 @@ import React from "react";
 import Badge, { BadgeProps } from "../Badge/Badge";
 import updateProps from "@/utils/update-props";
 
-const badgeGroupVariants = cva(
+export const badgeGroupVariants = cva(
   "inline-flex justify-center items-center border py-1 transition-all",
   {
     variants: {
@@ -26,6 +26,10 @@ const badgeGroupVariants = cva(
       size: {
         md: "gap-2 text-xs font-medium",
         lg: "gap-3 text-sm font-medium",
+      },
+      modern: {
+        true: "",
+        false: "",
       },
     },
     compoundVariants: [
@@ -101,6 +105,7 @@ const badgeGroupVariants = cva(
       variant: "pill",
       color: "gray",
       outline: false,
+      modern: false,
       size: "lg",
     },
   },
@@ -117,6 +122,7 @@ export const storyBadgeGroupVariants: StoryVariants = {
   variant: ["badge", "pill"],
   color: ["gray", "brand", "error", "warning", "success"],
   outline: [true, false],
+  modern: [true, false],
   size: ["md", "lg"],
 };
 
@@ -130,10 +136,11 @@ export interface BadgeGroupProps extends BadgeGroupVariants {
 }
 
 const BadgeGroup: React.FC<BadgeGroupProps> = ({
-  variant,
-  color,
-  outline,
-  size,
+  variant = "pill",
+  color = "gray",
+  outline = false,
+  size = "md",
+  modern = false,
   innerBadge: innerBadgeProps,
   innerBadgePosition = "left",
   children,
@@ -141,6 +148,18 @@ const BadgeGroup: React.FC<BadgeGroupProps> = ({
   leftIcon,
   rightIcon,
 }) => {
+  const dot = (
+    <div
+      className={cn("h-2 w-2 rounded-full border-[3px]", {
+        "bg-success-500 border-success-100":
+          color == "gray" || color == "success",
+        "bg-brand-500 border-brand-100": color == "brand",
+        "bg-error-500 border-error-100": color == "error",
+        "bg-warning-500 border-warning-100": color == "warning",
+      })}
+    />
+  );
+
   const innerBadge = (
     <Badge
       {...innerBadgeProps}
@@ -148,6 +167,16 @@ const BadgeGroup: React.FC<BadgeGroupProps> = ({
       color={color}
       outline={outline}
       variant={variant}
+      leftIcon={
+        modern && innerBadgePosition == "left" ? (
+          <>
+            <div className="mr-1">{dot}</div>
+            {innerBadgeProps.leftIcon}
+          </>
+        ) : (
+          innerBadgeProps.leftIcon
+        )
+      }
       className={cn("bg-white", innerBadgeProps.className)}
     />
   );

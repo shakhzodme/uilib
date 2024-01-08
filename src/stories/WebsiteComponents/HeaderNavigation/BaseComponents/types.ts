@@ -17,6 +17,13 @@ export type NavigationMenuItem = {
   iconFeatured?: boolean;
 };
 
+export interface SimpleNavigationTrigger {
+  name: "simple";
+  items: NavigationMenuItem[];
+  columns?: 1 | 2;
+  footer?: React.ReactNode;
+}
+
 export interface FeaturedCardNavigationTrigger {
   name: "featured-card";
   items: NavigationMenuItem[];
@@ -24,5 +31,5 @@ export interface FeaturedCardNavigationTrigger {
 }
 
 export type NavigationWithTrigger = NavigationItem & {
-  trigger?: FeaturedCardNavigationTrigger;
+  trigger?: SimpleNavigationTrigger | FeaturedCardNavigationTrigger;
 };

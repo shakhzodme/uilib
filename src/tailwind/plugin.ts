@@ -2,6 +2,7 @@ import plugin from "tailwindcss/plugin";
 import { namedColors } from "./colors";
 import { fontSize } from "./fontSize";
 import { shadows } from "./shadows";
+import animatePlugin from "tailwindcss-animate";
 
 export default function uilibTailwind() {
   return plugin(
@@ -31,6 +32,7 @@ export default function uilibTailwind() {
           colors: namedColors.colors,
         },
       },
+      plugins: [animatePlugin],
     },
   );
 }

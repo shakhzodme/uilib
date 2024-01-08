@@ -1,13 +1,20 @@
 import React from "react";
 import { MediaDevices } from "untitledui-js";
 import { Component as DropdownHeaderNavigation } from "@/stories/WebsiteComponents/HeaderNavigation/DropdownHeaderNavigation";
-import { Button } from "@/stories/Components";
+import { Button, BadgeGroup } from "@/stories/Components";
 
 const First: React.FC = () => {
   return (
     <div className="min-h-screen">
       <DropdownHeaderNavigation />
       <section className="text-center">
+        <BadgeGroup
+          innerBadge={{ children: "New feature" }}
+          variant="badge"
+          modern={true}
+        >
+          Check out the team dashboard
+        </BadgeGroup>
         <h1 className="text-display-xl font-semibold mb-6">
           Beautiful analytics to grow smarter
         </h1>

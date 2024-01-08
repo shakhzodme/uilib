@@ -12,6 +12,7 @@ import {
   useClick,
   useDismiss,
 } from "@floating-ui/react";
+import SimpleTrigger from "../Triggers/SimpleTrigger/SimpleTrigger";
 
 const NavigationItem: React.FC<NavigationWithTrigger> = ({
   label,
@@ -67,6 +68,7 @@ const NavigationItem: React.FC<NavigationWithTrigger> = ({
           style={floatingStyles}
           {...getFloatingProps()}
         >
+          {trigger.name == "simple" && <SimpleTrigger trigger={trigger} />}
           {trigger.name == "featured-card" && (
             <FeaturedCardTrigger trigger={trigger} />
           )}
