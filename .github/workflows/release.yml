@@ -30,6 +30,12 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
+    - name: Set git credentials
+      run: |
+        git config user.name github-actions[bot]
+        git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+
     - name: Bump version and tag
       run: |
         # Depending on how you want to bump, you may use
@@ -37,9 +43,6 @@ jobs:
         # npm version minor -m "Bump to %s"
         npm version ${{ github.event.inputs.version }} -m "Bump to %s"
         git push --follow-tags
-      env:
-        GIT_COMMITTER_NAME: github-actions[bot]
-        GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
 
     - name: Publish to npm
       run: npm publish
