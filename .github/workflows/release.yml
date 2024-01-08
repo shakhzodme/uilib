@@ -10,7 +10,6 @@ on:
         default: 'patch'
         options:
           - 'minor'
-          - 'major'
           - 'patch'
 
 jobs:
