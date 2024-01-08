@@ -1,4 +1,4 @@
-name: Release a new version of library
+name: Release a new version
 
 on:
   workflow_dispatch:
