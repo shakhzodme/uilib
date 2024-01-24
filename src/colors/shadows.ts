@@ -1,11 +1,9 @@
-import { Color, gray } from "./palettes";
-
 export type Shadow = {
   x: number;
   y: number;
   blur: number;
   spread: number;
-  color: Color;
+  color: string;
   opacity: number;
 };
 
@@ -16,7 +14,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 1,
       blur: 2,
       spread: 0,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 5,
     },
   ],
@@ -26,7 +24,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 1,
       blur: 3,
       spread: 0,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 10,
     },
     {
@@ -34,7 +32,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 1,
       blur: 2,
       spread: 0,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 6,
     },
   ],
@@ -44,7 +42,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 4,
       blur: 8,
       spread: -2,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 10,
     },
     {
@@ -52,7 +50,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 2,
       blur: 4,
       spread: -2,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 6,
     },
   ],
@@ -62,7 +60,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 12,
       blur: 16,
       spread: -4,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 8,
     },
     {
@@ -70,7 +68,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 4,
       blur: 6,
       spread: -2,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 3,
     },
   ],
@@ -80,7 +78,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 12,
       blur: 16,
       spread: -4,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 8,
     },
     {
@@ -88,7 +86,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 4,
       blur: 6,
       spread: -2,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 3,
     },
   ],
@@ -98,7 +96,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 24,
       blur: 48,
       spread: -12,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 18,
     },
   ],
@@ -108,7 +106,7 @@ export const rawShadows: Record<string, Shadow[]> = {
       y: 32,
       blur: 64,
       spread: -12,
-      color: gray[900],
+      color: "var(--gray-900)",
       opacity: 14,
     },
   ],

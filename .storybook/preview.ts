@@ -15,20 +15,32 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Introduction', 'Foundations', 'Components', 'Shared Assets', 'Website Pages', 'Website Components', '*']
-      }
-    }
+        order: [
+          "Introduction",
+          "Foundations",
+          "Components",
+          "Shared Assets",
+          "Website Pages",
+          "Website Components",
+          "Application Pages",
+          "Application Components",
+          "*",
+        ],
+      },
+    },
   },
 
   // @ts-expect-error
-  decorators: [withThemeByClassName({
+  decorators: [
+    withThemeByClassName({
       themes: {
-          // nameOfTheme: 'classNameForTheme',
-          light: '',
-          dark: 'dark',
+        // nameOfTheme: 'classNameForTheme',
+        light: "",
+        dark: "dark",
       },
-      defaultTheme: 'light',
-  })]
+      defaultTheme: "light",
+    }),
+  ],
 };
 
 export default preview;

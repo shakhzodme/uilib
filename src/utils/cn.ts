@@ -1,6 +1,9 @@
-import { rawNamedColors } from "@/colors/named-colors";
 import { clsx, type ClassValue } from "clsx";
 import { extendTailwindMerge } from "tailwind-merge";
+
+import uilibNamedColorsCSS from "@/styles/named-colors.css?inline";
+import { extractVariables } from "@/tailwind/parser.ts";
+const NAMED_COLORS = extractVariables([uilibNamedColorsCSS]);
 
 const twMerge = extendTailwindMerge({
   extend: {
@@ -10,9 +13,7 @@ const twMerge = extendTailwindMerge({
           shadow: ["button-focus"],
         },
       ],
-      "border-color": Object.keys(rawNamedColors).filter((name) =>
-        name.startsWith("border-"),
-      ),
+      "border-color": NAMED_COLORS.filter((name) => name.startsWith("border-")),
     },
   },
 });

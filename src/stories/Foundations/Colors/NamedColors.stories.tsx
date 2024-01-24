@@ -1,8 +1,23 @@
-import { NamedColor, rawNamedColors } from "@/colors/named-colors";
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import CellSwatchDark from "../DesignAnnotations/CellSwatchDark/CellSwatchDark";
 import CellSwatchLight from "../DesignAnnotations/CellSwatchLight/CellSwatchLight";
 import cn from "@/utils/cn";
+import headings from "./headings";
+import breakAfter from "./break-after";
+import description from "./description";
+import { COLORS_REVERSED, NAMED_COLORS } from "@/colors";
+
+type NamedColor = {
+  light: {
+    value: string;
+    label: string;
+  };
+  dark: {
+    value: string;
+    label: string;
+  };
+};
 
 const meta = {
   title: "Foundations/Colors/Named Colors",
@@ -14,20 +29,15 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-type HeadingProps = {
-  heading: string;
-  description: string;
-};
-
 const Divider: React.FC = () => (
   <tr className="border-y border-secondary">
     <td className="bg-secondary h-3" colSpan={4} />
   </tr>
 );
 
-const Heading: React.FC<{ props: HeadingProps }> = ({
-  props: { heading, description },
-}) => (
+const Heading: React.FC<{
+  props: { heading: string; description: string };
+}> = ({ props: { heading, description } }) => (
   <>
     <tr>
       <td colSpan={4}>
@@ -47,10 +57,10 @@ const Heading: React.FC<{ props: HeadingProps }> = ({
   </>
 );
 
-const ColorRow: React.FC<{ name: string; color: NamedColor }> = ({
-  name,
-  color,
-}) => {
+const ColorRow: React.FC<{
+  name: string;
+  color: NamedColor;
+}> = ({ name, color }) => {
   const main = name.split("_")[0];
   const modifier = name.split("_").slice(1).join("_");
 
@@ -72,12 +82,12 @@ const ColorRow: React.FC<{ name: string; color: NamedColor }> = ({
         </div>
       </td>
       <td className="p-5">
-        <CellSwatchLight code={color.light.code} label={color.light.name} />
+        <CellSwatchLight code={color.light.value} label={color.light.label} />
       </td>
       <td className="p-5">
-        <CellSwatchDark code={color.dark.code} label={color.dark.name} />
+        <CellSwatchDark code={color.dark.value} label={color.dark.label} />
       </td>
-      <td className="p-5 text-tertiary text-md">{color.description}</td>
+      <td className="p-5 text-tertiary text-md">{description[name]}</td>
     </tr>
   );
 };
@@ -86,54 +96,7 @@ const NamedColors: React.FC<{ start: string; end: string }> = ({
   start,
   end,
 }) => {
-  const headings: Record<string, HeadingProps> = {
-    "text-primary": {
-      heading: "Text color",
-      description:
-        "Use text color variables to manage all text fill colors in your designs across light and dark modes.",
-    },
-    "border-primary": {
-      heading: "Border color",
-      description:
-        "Use border color variables to manage all stroke colors in your designs across light and dark modes.",
-    },
-    "fg-primary": {
-      heading: "Foreground color",
-      description:
-        "Use foreground color variables to manage all non-text foreground elements in your designs across light and dark modes.",
-    },
-    "bg-primary": {
-      heading: "Background color",
-      description:
-        "Use background color variables to manage all fill colors for elements in your designs across light and dark modes.",
-    },
-  };
-
-  const breakAfter = [
-    "text-quarterary_on-brand",
-    "text-placeholder_subtle",
-    "text-tertiary_alt",
-    "border-tertiary",
-    "border-disabled_subtle",
-    "border-brand-solid_alt",
-    "fg-senary",
-    "fg-disabled_subtle",
-    "fg-brand-secondary",
-    "bg-quarterary",
-    "bg-overlay",
-    "button-primary-border_hover",
-    "button-secondary-shadow",
-    "button-secondary-color-shadow",
-    "button-tertiary-bg_hover",
-    "button-tertiary-color-bg_hover",
-    "button-primary-error-border_hover",
-    "button-secondary-error-border_hover",
-    "icon-fg-brand_on-brand",
-    "featured-icon-light-fg-success",
-    "featured-icon-dark-fg-success",
-  ];
-
-  const allKeys = Object.keys(rawNamedColors);
+  const allKeys = NAMED_COLORS;
   const startIndex = allKeys.findIndex((key) => key == start);
   const endIndex = allKeys.findIndex((key) => key == end);
   const keys = allKeys.slice(
@@ -141,11 +104,36 @@ const NamedColors: React.FC<{ start: string; end: string }> = ({
     endIndex != -1 ? endIndex + 1 : allKeys.length - 1,
   );
 
+  const [colors, setColors] = React.useState<Record<string, NamedColor>>({});
+
+  React.useEffect(() => {
+    const colors: Record<string, NamedColor> = {};
+    const element = document.createElement("div");
+    document.body.append(element);
+    for (const key of keys) {
+      const color = getComputedStyle(element).getPropertyValue("--" + key);
+      colors[key] = {
+        light: { value: color, label: COLORS_REVERSED[color] ?? color },
+        dark: { value: color, label: COLORS_REVERSED[color] ?? color },
+      };
+    }
+    element.classList.add("dark");
+    for (const key of keys) {
+      const color = getComputedStyle(element).getPropertyValue("--" + key);
+      colors[key].dark = {
+        value: color,
+        label: COLORS_REVERSED[color] ?? color,
+      };
+    }
+    element.remove();
+    setColors(colors);
+  }, []);
+
   return (
     <div className="flex flex-col gap-2 p-8">
       <table>
         {keys.map((key) => {
-          const color = rawNamedColors[key];
+          const color = colors[key] ?? { light: "", dark: "" };
           return (
             <>
               {key in headings && <Heading props={headings[key]} />}
