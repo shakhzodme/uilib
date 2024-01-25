@@ -7,7 +7,7 @@ import { Component as TestimonialSection } from "@/stories/WebsiteComponents/Tes
 import { Component as FaqSection } from "@/stories/WebsiteComponents/FaqSections/Accordion";
 import { Component as BlogSection } from "@/stories/WebsiteComponents/BlogSections/BlogSections/Simple";
 import { Component as FooterSection } from "@/stories/WebsiteComponents/Footers/Large/First";
-import { Badge } from "@/stories/Components";
+import { Badge } from "@/index";
 
 const footerNavigation = [
   {

@@ -1,7 +1,6 @@
-import { Button, type ButtonProps } from "@/stories/Components";
-import cn from "@/utils/cn";
-import { cx } from "cva";
 import React from "react";
+import { Button, type ButtonProps } from "@/index";
+import cn from "@/utils/cn";
 
 export interface FeaturedCardProps {
   className?: string;
@@ -20,7 +19,7 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({
 }) => {
   return (
     <div
-      className={cx(
+      className={cn(
         "max-w-[320px] hover:bg-primary_hover p-3 rounded-lg transition-all",
         className,
       )}

@@ -1,10 +1,10 @@
-import { Button } from "@/stories/Components";
-import { Layers } from "@/stories/Foundations/Logos";
 import React from "react";
+import { Button } from "@/index";
+import { Layers } from "@/stories/Foundations/Logos";
 import { Education } from "untitledui-js";
 import { NavigationWithTrigger } from "../BaseComponents/types";
-import NavigationItem from "../BaseComponents/NavigationItem/NavigationItem";
 import useDarkMode from "@/hooks/use-dark-mode";
+import NavigationItem from "../BaseComponents/NavigationItem/NavigationItem";
 
 const navigation: NavigationWithTrigger[] = [
   { label: "Home", href: "#" },

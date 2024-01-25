@@ -1,6 +1,6 @@
 import React from "react";
+import { Button } from "@/index";
 import FaqItem from "../BaseComponents/FaqItem/FaqItem";
-import { Button } from "@/stories/Components";
 
 const Accordion: React.FC = () => {
   return (

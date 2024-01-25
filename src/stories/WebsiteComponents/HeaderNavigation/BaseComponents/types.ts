@@ -1,6 +1,6 @@
 import React from "react";
 import { FeaturedCardProps } from "./FeaturedCard/FeaturedCard";
-import { type ButtonProps, type BadgeProps } from "@/stories/Components";
+import { type ButtonProps, type BadgeProps } from "@/index";
 
 export type NavigationItem = {
   label: string;

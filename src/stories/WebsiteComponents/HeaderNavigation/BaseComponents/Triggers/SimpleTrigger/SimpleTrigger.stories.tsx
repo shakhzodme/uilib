@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import Component from "./SimpleTrigger";
 import NavigationItem from "../../NavigationItem/NavigationItem";
 import { Arrow, Education } from "untitledui-js";
-import { Button } from "@/stories/Components";
+import { Button } from "@/index";
 
 const meta = {
   title: "Website Components/Header Navigation/Base Components/Triggers",

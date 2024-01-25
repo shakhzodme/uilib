@@ -1,6 +1,5 @@
-import { Button } from "@/stories/Components";
 import React from "react";
-import { ButtonProps } from "@/stories/Components/Button/Button";
+import { Button, type ButtonProps } from "@/index";
 
 const First: React.FC<{
   navigation: {

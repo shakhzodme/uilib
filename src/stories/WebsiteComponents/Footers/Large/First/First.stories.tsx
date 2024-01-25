@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import Component from "./First";
-import { Badge } from "@/stories/Components";
+import { Badge } from "@/index";
 
 const meta = {
   title: "Website Components/Footers/Large",

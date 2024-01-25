@@ -1,5 +1,5 @@
-import { Button } from "@/stories/Components";
 import React from "react";
+import { Button } from "@/index";
 import SimpleCard from "../../BlogCards/Simple/Simple";
 
 const Simple: React.FC = () => {

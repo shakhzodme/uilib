@@ -1,8 +1,7 @@
 import React from "react";
-import { Button } from "@/stories/Components";
+import { Button, type ButtonProps } from "@/index";
 import updateProps from "@/utils/update-props";
 import cn from "@/utils/cn";
-import { ButtonProps } from "@/stories/Components/Button/Button";
 
 const FeatureText: React.FC<{
   heading: string;

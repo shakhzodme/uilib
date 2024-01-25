@@ -1,6 +1,5 @@
-import { Button } from "@/stories/Components";
 import React from "react";
-import { ButtonProps } from "@/stories/Components/Button/Button";
+import { Button, type ButtonProps } from "@/index";
 import { FaGithub, FaTelegram, FaXTwitter } from "react-icons/fa6";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { SlSocialDribbble } from "react-icons/sl";

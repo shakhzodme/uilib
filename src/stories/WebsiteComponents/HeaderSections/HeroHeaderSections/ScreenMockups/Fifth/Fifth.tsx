@@ -1,7 +1,7 @@
 import React from "react";
 import { MediaDevices } from "untitledui-js";
 import { Component as DropdownHeaderNavigation } from "@/stories/WebsiteComponents/HeaderNavigation/DropdownHeaderNavigation";
-import { Button, BadgeGroup } from "@/stories/Components";
+import { Button, BadgeGroup } from "@/index";
 
 const First: React.FC = () => {
   return (

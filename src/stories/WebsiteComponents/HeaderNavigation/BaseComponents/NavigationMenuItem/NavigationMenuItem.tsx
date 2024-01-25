@@ -1,6 +1,6 @@
 import React from "react";
 import { NavigationMenuItem as NavigationMenuItemProps } from "../types";
-import { Badge, Button } from "@/stories/Components";
+import { Badge, Button } from "@/index";
 import updateProps from "@/utils/update-props";
 import cn from "@/utils/cn";
 
