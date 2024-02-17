@@ -7,7 +7,7 @@ const Eighth: React.FC = () => {
   return (
     <div className="min-h-screen">
       <DropdownHeaderNavigation />
-      <section className="flex flex-col items-center justify-center text-center pt-32 pb-16">
+      <section className="container mx-auto flex flex-col items-center justify-center text-center pt-32">
         <BadgeGroup innerBadge={{ children: "What's new?" }} variant="badge" modern={true}>
           Instantly issue virtual cards
         </BadgeGroup>
@@ -22,8 +22,11 @@ const Eighth: React.FC = () => {
           </Button>
           <Button size="2xl">Sign up</Button>
         </div>
+        <img
+          src="https://images.unsplash.com/photo-1613243555978-636c48dc653c"
+          className="w-full h-96 object-cover mt-16"
+        ></img>
       </section>
-      <div className="container mx-auto h-96 bg-[url('https://images.unsplash.com/photo-1613243555978-636c48dc653c')] bg-cover"></div>
     </div>
   );
 };

@@ -13,7 +13,10 @@ const Third = () => {
         </Button>
         <Button className="w-full sm:w-max">Get started</Button>
       </div>
-      <div className="w-full h-96 mt-16 bg-[url('https://images.unsplash.com/photo-1613243555978-636c48dc653c')] bg-cover"></div>
+      <img
+        src="https://images.unsplash.com/photo-1613243555978-636c48dc653c"
+        className="w-full h-96 object-cover mt-16"
+      ></img>
     </div>
   );
 };
