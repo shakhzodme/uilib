@@ -17,21 +17,21 @@ export interface SelectProps {
   triggerProps?: React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>;
   contentProps?: React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>;
   options:
-    | ({
-        type: "item";
-      } & React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>)
+  | (({
+    type: "item";
+  } & React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>)
     | ({ type: "label" } & React.ComponentPropsWithoutRef<
-        typeof SelectPrimitive.Label
-      >)
+      typeof SelectPrimitive.Label
+    >)
     | ({ type: "separator" } & React.ComponentPropsWithoutRef<
-        typeof SelectPrimitive.Separator
-      >)[];
+      typeof SelectPrimitive.Separator
+    >))[];
 }
 
 const Select: React.FC<SelectProps> = ({
   className,
   placeholder,
-  options,
+  options = [],
   triggerProps = {},
   contentProps = {},
 }) => {

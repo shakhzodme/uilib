@@ -6,7 +6,6 @@ import { withThemeByClassName } from "@storybook/addon-themes";
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -15,20 +14,32 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Introduction', 'Foundations', 'Components', 'Shared Assets', 'Website Pages', 'Website Components', '*']
-      }
-    }
+        order: [
+          "Introduction",
+          "Foundations",
+          "Components",
+          "Shared Assets",
+          "Website Pages",
+          "Website Components",
+          "Application Pages",
+          "Application Components",
+          "*",
+        ],
+      },
+    },
   },
 
-  // @ts-expect-error
-  decorators: [withThemeByClassName({
+  decorators: [
+    // eslint-disable-next-line
+    // @ts-expect-error
+    withThemeByClassName({
       themes: {
-          // nameOfTheme: 'classNameForTheme',
-          light: '',
-          dark: 'dark',
+        light: "",
+        dark: "dark",
       },
-      defaultTheme: 'light',
-  })]
+      defaultTheme: "light",
+    }),
+  ],
 };
 
 export default preview;
